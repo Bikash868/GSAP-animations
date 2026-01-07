@@ -7,7 +7,7 @@ import Image from 'next/image';
 const MehndiWebsite = () => {
   const [activeDesign, setActiveDesign] = useState(0);
   const [fillProgress, setFillProgress] = useState(0);
-  const pinnedSectionRef = useRef(null);
+  const pinnedSectionRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll();
   const heroRef = useRef(null);
   
