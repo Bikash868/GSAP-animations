@@ -1,5 +1,7 @@
+"use client";
 import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
+
 export const BookingSection = () => {
   return (
     <section id="contact" className="py-32 px-4 relative overflow-hidden">
@@ -33,7 +35,7 @@ export const BookingSection = () => {
           <h2 className="text-6xl md:text-7xl font-bold mb-6 text-white">
             Book Your Session
           </h2>
-          <p className="text-2xl text-amber-100 max-w-3xl mx-auto">
+          <p className="text-lg text-amber-100 max-w-3xl mx-auto">
             Transform your hands into a canvas of beauty
           </p>
         </motion.div>
@@ -49,36 +51,36 @@ export const BookingSection = () => {
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full px-8 py-5 rounded-2xl bg-white/90 border-2 border-amber-200 focus:border-amber-500 outline-none transition-all text-lg text-amber-900 placeholder-amber-600/50"
+              className="w-full px-6 py-4 rounded-2xl bg-white/90 border-2 border-amber-200 focus:border-amber-500 outline-none transition-all text-sm text-amber-900 placeholder-amber-600/50"
             />
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full px-8 py-5 rounded-2xl bg-white/90 border-2 border-amber-200 focus:border-amber-500 outline-none transition-all text-lg text-amber-900 placeholder-amber-600/50"
+              className="w-full px-6 py-4 rounded-2xl bg-white/90 border-2 border-amber-200 focus:border-amber-500 outline-none transition-all text-sm text-amber-900 placeholder-amber-600/50"
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <input
               type="tel"
               placeholder="Phone Number"
-              className="w-full px-8 py-5 rounded-2xl bg-white/90 border-2 border-amber-200 focus:border-amber-500 outline-none transition-all text-lg text-amber-900 placeholder-amber-600/50"
+              className="w-full px-6 py-4 rounded-2xl bg-white/90 border-2 border-amber-200 focus:border-amber-500 outline-none transition-all text-sm text-amber-900 placeholder-amber-600/50"
             />
             <input
               type="date"
-              className="w-full px-8 py-5 rounded-2xl bg-white/90 border-2 border-amber-200 focus:border-amber-500 outline-none transition-all text-lg text-amber-900"
+              className="w-full px-6 py-4 rounded-2xl bg-white/90 border-2 border-amber-200 focus:border-amber-500 outline-none transition-all text-sm text-amber-900"
             />
           </div>
-          <select className="w-full px-8 py-5 rounded-2xl bg-white/90 border-2 border-amber-200 focus:border-amber-500 outline-none transition-all text-lg text-amber-900 mb-6">
+          <select className="w-full px-6 py-4 rounded-2xl bg-white/90 border-2 border-amber-200 focus:border-amber-500 outline-none transition-all text-sm text-amber-900 mb-6">
             <option>Select Service Type</option>
-            <option>Bridal Mehndi</option>
-            <option>Party Mehndi</option>
-            <option>Arabic Mehndi</option>
-            <option>Traditional Mehndi</option>
+            <option>Bridal Mehndi – From ₹12,000</option>
+            <option>Party Mehndi – From ₹3,500</option>
+            <option>Arabic Mehndi – From ₹6,000</option>
+            <option>Traditional Mehndi – From ₹4,500</option>
           </select>
           <textarea
             placeholder="Tell us about your design preferences and occasion..."
             rows={5}
-            className="w-full px-8 py-5 rounded-2xl bg-white/90 border-2 border-amber-200 focus:border-amber-500 outline-none transition-all text-lg text-amber-900 placeholder-amber-600/50 mb-8"
+            className="w-full px-6 py-4 rounded-2xl bg-white/90 border-2 border-amber-200 focus:border-amber-500 outline-none transition-all text-sm text-amber-900 placeholder-amber-600/50 mb-8"
           />
           <motion.button
             whileHover={{
@@ -86,10 +88,10 @@ export const BookingSection = () => {
               boxShadow: "0 20px 60px rgba(0, 0, 0, 0.3)",
             }}
             whileTap={{ scale: 0.98 }}
-            className="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 text-white px-8 py-6 rounded-2xl text-xl font-bold shadow-2xl relative overflow-hidden group"
+            className="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 text-white px-8 py-5 rounded-2xl text-base font-bold shadow-2xl relative overflow-hidden group cursor-pointer"
           >
             <span className="relative z-10 flex items-center justify-center gap-3">
-              <Calendar size={24} />
+              <Calendar size={20} />
               Confirm Booking
             </span>
             <motion.div

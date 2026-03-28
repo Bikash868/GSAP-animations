@@ -1,5 +1,7 @@
+"use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
 
 export const HeroSection = () => {
@@ -14,7 +16,6 @@ export const HeroSection = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
       style={{ y: heroY, scale: heroScale }}
     >
-      {/* Animated Background Pattern */}
       <div className="absolute inset-0">
         <motion.div
           className="absolute inset-0 opacity-10"
@@ -29,7 +30,6 @@ export const HeroSection = () => {
         />
       </div>
 
-      {/* Floating Elements */}
       {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
@@ -88,7 +88,7 @@ export const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-2xl md:text-3xl text-amber-900/80 mb-12 font-light"
+          className="text-lg md:text-xl text-amber-900/80 mb-12 font-light"
         >
           Where tradition meets contemporary elegance
         </motion.p>
@@ -99,32 +99,36 @@ export const HeroSection = () => {
           transition={{ delay: 0.7, duration: 0.8 }}
           className="flex gap-6 justify-center flex-wrap"
         >
-          <motion.button
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 20px 40px rgba(217, 119, 6, 0.4)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-amber-700 to-orange-700 text-white px-10 py-5 rounded-full text-xl font-semibold shadow-2xl relative overflow-hidden group"
-          >
-            <span className="relative z-10">Explore Gallery</span>
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-orange-800 to-amber-800"
-              initial={{ x: "-100%" }}
-              whileHover={{ x: 0 }}
-              transition={{ duration: 0.3 }}
-            />
-          </motion.button>
-          <motion.button
-            whileHover={{
-              scale: 1.05,
-              backgroundColor: "rgba(217, 119, 6, 0.1)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="border-3 border-amber-700 text-amber-900 px-10 py-5 rounded-full text-xl font-semibold transition-all backdrop-blur-sm"
-          >
-            Our Services
-          </motion.button>
+          <Link href="/designs">
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 20px 40px rgba(217, 119, 6, 0.4)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="cursor-pointer bg-gradient-to-r from-amber-700 to-orange-700 text-white px-10 py-5 rounded-full text-base font-semibold shadow-2xl relative overflow-hidden group"
+            >
+              <span className="relative z-10">Explore Designs</span>
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-orange-800 to-amber-800"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: 0 }}
+                transition={{ duration: 0.3 }}
+              />
+            </motion.button>
+          </Link>
+          <a href="#services">
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+                backgroundColor: "rgba(217, 119, 6, 0.1)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="cursor-pointer border-3 border-amber-700 text-amber-900 px-10 py-5 rounded-full text-base font-semibold transition-all backdrop-blur-sm"
+            >
+              Our Services
+            </motion.button>
+          </a>
         </motion.div>
       </div>
 

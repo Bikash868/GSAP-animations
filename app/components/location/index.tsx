@@ -1,4 +1,5 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+"use client";
+import { motion } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export const Location = () => {
@@ -21,7 +22,7 @@ export const Location = () => {
           <h2 className="text-6xl font-bold mb-6 bg-gradient-to-r from-amber-900 to-orange-900 bg-clip-text text-transparent">
             Visit Our Studio
           </h2>
-          <p className="text-2xl text-amber-800/70">
+          <p className="text-xl text-amber-800/70">
             Experience artistry in a welcoming space
           </p>
         </motion.div>
@@ -38,19 +39,19 @@ export const Location = () => {
               {
                 icon: <MapPin size={28} />,
                 title: "Address",
-                content: "123 Beauty Lane, Art District\nNew York, NY 10001",
+                content: "Saheed Nagar, Near Big Bazaar\nBhubaneswar, Odisha 751007",
                 color: "from-amber-500 to-orange-500",
               },
               {
                 icon: <Phone size={28} />,
                 title: "Phone",
-                content: "+1 (555) 123-4567\nMon-Sat: 9AM - 7PM",
+                content: "+91 98765 43210\nMon-Sat: 9AM - 7PM",
                 color: "from-orange-500 to-amber-600",
               },
               {
                 icon: <Mail size={28} />,
                 title: "Email",
-                content: "info@mehndiartistry.com\nQuick response within 24hrs",
+                content: "pushpamehndiarts@gmail.com\nQuick response within 24hrs",
                 color: "from-amber-600 to-orange-600",
               },
             ].map((item, i) => (
@@ -69,31 +70,15 @@ export const Location = () => {
                   {item.icon}
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2 text-amber-900">
+                  <h3 className="text-xl font-bold mb-2 text-amber-900">
                     {item.title}
                   </h3>
-                  <p className="text-amber-800/80 whitespace-pre-line leading-relaxed">
+                  <p className="text-amber-800/80 whitespace-pre-line leading-relaxed text-[15px]">
                     {item.content}
                   </p>
                 </div>
               </motion.div>
             ))}
-
-            {/* <div className="flex gap-4 pt-4">
-                {[
-                  { Icon: Instagram, color: 'from-purple-500 to-pink-500' },
-                  { Icon: Facebook, color: 'from-blue-500 to-blue-600' },
-                ].map((item, i) => (
-                  <motion.div
-                    key={i}
-                    whileHover={{ scale: 1.2, rotate: 10 }}
-                    whileTap={{ scale: 0.9 }}
-                    className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-2xl flex items-center justify-center cursor-pointer shadow-xl`}
-                  >
-                    <item.Icon className="text-white" size={28} />
-                  </motion.div>
-                ))}
-              </div> */}
           </motion.div>
 
           <motion.div
@@ -104,19 +89,17 @@ export const Location = () => {
             className="relative"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-600 rounded-[3rem] blur-2xl opacity-30" />
-            <div className="relative bg-gradient-to-br from-amber-100 to-orange-100 rounded-[3rem] h-[500px] flex items-center justify-center overflow-hidden border-4 border-white shadow-2xl">
-              <MapPin size={80} className="text-amber-700 opacity-30" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">📍</div>
-                  <div className="text-2xl font-bold text-amber-900">
-                    Map Location
-                  </div>
-                  <div className="text-amber-700 mt-2">
-                    Interactive map placeholder
-                  </div>
-                </div>
-              </div>
+            <div className="relative rounded-[3rem] h-[500px] overflow-hidden border-4 border-white shadow-2xl">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.098!2d85.8245!3d20.2961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909d2d5170aa5%3A0xfc580e2b68b33fa8!2sSaheed%20Nagar%2C%20Bhubaneswar%2C%20Odisha!5e0!3m2!1sen!2sin!4v1711622400000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Pushpa Mehndi Arts - Bhubaneswar"
+              />
             </div>
           </motion.div>
         </div>
