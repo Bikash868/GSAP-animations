@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Facebook, Heart } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
 
 const quickLinks = [
   { label: "Home", href: "/#home" },
@@ -110,9 +110,16 @@ export const Footer = () => {
             <p className="text-xs text-amber-400">
               © 2026 Pushpa Mehndi Arts. All rights reserved.
             </p>
-            <p className="text-xs text-amber-500 flex items-center gap-1">
-              Crafted with <Heart size={12} className="text-red-400 fill-red-400" /> and henna
-            </p>
+            <div className="flex items-center gap-2 text-xs text-amber-500">
+              <span>Created by</span>
+              <Image
+                src="/creator.png"
+                alt="Vibe Visuals"
+                width={100}
+                height={28}
+                className="opacity-80 hover:opacity-100 transition-opacity"
+              />
+            </div>
           </div>
         </motion.div>
       </div>
