@@ -19,8 +19,12 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Pushpa Mehndi Arts - Expert Mehndi Artist | Bridal & Party Designs",
+  title: "Pushpa Mehndi Arts",
   description: "Premium mehndi artistry for weddings, parties, and special occasions. 15+ years of experience creating beautiful traditional, Arabic, and contemporary mehndi designs.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
